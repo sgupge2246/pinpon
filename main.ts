@@ -8,18 +8,10 @@ let ball_dx = 0
 let ball_dy = 0
 let in_game = false
 input.onButtonPressed(Button.A, function () {
-    if (bar_x > 0) {
-        led.unplot(bar_x + 1, 4)
-        bar_x = bar_x - 1
-        led.plot(bar_x, 4)
-    }
+    pinpon.leftmove()
 })
 input.onButtonPressed(Button.B, function () {
-    if (bar_x < 3) {
-        led.unplot(bar_x, 4)
-        bar_x = bar_x + 1
-        led.plot(bar_x + 1, 4)
-    }
+    pinpon.rightmove()
 })
 basic.forever(function () {
     point = 0
